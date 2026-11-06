@@ -300,7 +300,7 @@ resource "aws_ecs_service" "result_service" {
 
   network_configuration {
     subnets          = aws_subnet.private[*].id
-    security_groups  = [aws_security_group.vote_sg.id]
+    security_groups  = [aws_security_group.results_sg.id]
     assign_public_ip = false
   }
 
