@@ -1,5 +1,5 @@
 
-export ECR_URI="893877416641.dkr.ecr.eu-west-2.amazonaws.com"  
+export ECR_URI="<<<Account-id>>>.dkr.ecr.eu-west-2.amazonaws.com"  
 export REGION="eu-west-2"
 aws ecr get-login-password --region "$REGION" | docker login --username AWS --password-stdin "$ECR_URI"
 for svc in web worker result ; do
