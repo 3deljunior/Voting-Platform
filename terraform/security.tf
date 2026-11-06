@@ -97,7 +97,7 @@ resource "aws_security_group" "db_sg" {
     to_port         = 5432
     protocol        = "tcp"
     security_groups = [aws_security_group.worker_sg.id,
-      aws_security_group.vote_sg.id
+      aws_security_group.results_sg.id
       ]
   }
 
