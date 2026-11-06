@@ -1,0 +1,11 @@
+*.pyc
+project.lock.json
+bin/
+obj/
+.vs/
+node_modules/
+# Terraform local files and plugins
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
