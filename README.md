@@ -16,6 +16,8 @@ A highly available, scalable, and secure microservices-based voting platform des
 
 ## 🏗️ Architecture Overview
 
+![Architecture Diagram](./arch.jpeg)
+
 The system is decoupled into three primary microservices (Frontend, Voting API, and Results/Worker) deployed on AWS serverless container infrastructure.
 
 *   **Compute:** Amazon ECS on Fargate (Serverless Containers).
