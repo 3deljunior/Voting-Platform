@@ -4,9 +4,11 @@
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Amazon SQS](https://img.shields.io/badge/Amazon_SQS-FF4F8B?style=for-the-badge&logo=amazon-sqs&logoColor=white)
 
-A highly available, scalable, and secure microservices-based voting platform designed for university campus elections. Built and provisioned entirely via Infrastructure as Code (IaC) to handle concentrated traffic spikes while optimizing cloud compute costs.
+A highly available, scalable, and secure microservices-based voting platform designed for university campus elections. Developed as a graduation project for the **National Telecommunication Institute (NTI)**, this system is built and provisioned entirely via Infrastructure as Code (IaC) to handle concentrated traffic spikes while optimizing cloud compute costs.
+
+*Based on the [Docker Example Voting App](https://github.com/dockersamples/example-voting-app/tree/main).*
 
 ## 🏗️ Architecture Overview
 
@@ -14,7 +16,7 @@ The system is decoupled into three primary microservices (Frontend, Voting API, 
 
 *   **Compute:** Amazon ECS on Fargate (Serverless Containers).
 *   **Database:** Amazon Aurora Serverless v2 (PostgreSQL) for transactional data integrity.
-*   **Caching/Queue:** Redis for rapid vote ingestion and session management.
+*   **Queue:** Amazon SQS for rapid, decoupled vote ingestion and reliable message processing.
 *   **Traffic Distribution:** Application Load Balancer (ALB).
 *   **Security:** AWS WAF (Web Application Firewall) attached to the ALB.
 *   **Image Management:** Amazon ECR (Elastic Container Registry).
@@ -51,9 +53,8 @@ To minimize AWS billing while guaranteeing High Availability (HA), the infrastru
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/3deljunior/Voting-Platform.git
+   git clone [https://github.com/3deljunior/Voting-Platform.git](https://github.com/3deljunior/Voting-Platform.git)
    cd Voting-Platform
-   ```
 
 2. **Push Images to ECR:**
    ```bash
