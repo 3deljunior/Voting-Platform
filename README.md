@@ -57,7 +57,7 @@ To minimize AWS billing while guaranteeing High Availability (HA), the infrastru
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/3deljunior/Voting-Platform.git](https://github.com/3deljunior/Voting-Platform.git)
+   git clone https://github.com/3deljunior/Voting-Platform.git
    cd Voting-Platform
 
 2. **Push Images to ECR:**
